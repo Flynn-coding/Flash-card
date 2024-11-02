@@ -34,6 +34,7 @@
             padding: 20px;
             width: 300px;
             transition: transform 0.2s;
+            cursor: pointer;
         }
         .flashcard:hover {
             transform: scale(1.05);
@@ -43,6 +44,7 @@
         }
         p {
             margin: 10px 0 0 0;
+            display: none; /* Hide the answer initially */
         }
     </style>
 </head>
@@ -87,28 +89,28 @@
                 { question: "How do themes enhance literary analysis?", answer: "Themes provide insight into the underlying messages of a literary work, guiding analysis and interpretation. Recognizing recurring themes allows readers to connect with the text on a deeper level and understand its cultural or social implications." },
                 { question: "What is the importance of revision in writing?", answer: "Revision is crucial as it allows writers to refine their ideas, improve clarity, and enhance overall quality. It involves reviewing structure, content, and style, ensuring that the final product effectively communicates the intended message." },
                 { question: "How can one develop a strong thesis statement?", answer: "A strong thesis statement presents a clear, concise argument that guides the direction of the essay. It should be specific, debatable, and reflect the main points that will be discussed in the body of the text." },
-                { question: "What strategies can be used to improve writing skills?", answer: "Strategies to improve writing skills include reading extensively, practicing regularly, seeking feedback, and studying grammar and style. Engaging with diverse texts enhances understanding and informs personal writing style." },
-                { question: "What role does imagery play in poetry?", answer: "Imagery evokes sensory experiences, allowing readers to visualize scenes and feel emotions associated with the poem. It enhances the emotional impact and helps convey the poem's themes more effectively." },
-                { question: "How can one interpret the tone of a literary work?", answer: "Interpreting tone involves analyzing the author's choice of words, sentence structure, and overall style. Tone reflects the author's attitude toward the subject matter and influences how readers perceive the text." },
-                { question: "What are the characteristics of effective storytelling?", answer: "Effective storytelling includes a well-defined plot, relatable characters, and a clear message or theme. It engages the audience, evokes emotions, and creates a memorable experience that resonates beyond the narrative." }
+                { question: "What strategies can be used to improve writing skills?", answer: "Strategies to improve writing skills include reading extensively, practicing regularly, seeking feedback, and studying grammar and style. Engaging with diverse texts enhances understanding and informs one's writing style." },
+                { question: "How can literary devices enhance storytelling?", answer: "Literary devices, such as imagery, metaphor, and foreshadowing, enhance storytelling by adding layers of meaning and evoking emotions. They engage readers and enrich the narrative, making it more memorable." },
+                { question: "What are the characteristics of effective storytelling?", answer: "Effective storytelling includes a well-defined plot, relatable characters, and a clear message or theme. It engages the audience, evokes emotions, and creates a memorable experience that resonates beyond the narrative." },
+                { question: "How can one interpret the tone of a literary work?", answer: "Interpreting tone involves analyzing the author's choice of words, sentence structure, and overall style. Tone reflects the author's attitude toward the subject matter and influences how readers perceive the text." }
             ],
             Math: [
-                { question: "How do you calculate the area of a rectangle?", answer: "To calculate the area of a rectangle, multiply its length by its width. The formula is A = l × w, where A is the area, l is the length, and w is the width. This gives the total square units contained within the rectangle." },
-                { question: "What is the formula for the surface area of a cylinder?", answer: "The surface area of a cylinder can be calculated using the formula SA = 2πr(h + r), where r is the radius of the base and h is the height. This accounts for the area of the two circular bases and the curved surface." },
-                { question: "How do you find the volume of a prism?", answer: "To find the volume of a prism, use the formula V = B × h, where B is the area of the base and h is the height. This formula multiplies the base area by the height, resulting in the total cubic units." },
-                { question: "What does rearranging a formula involve?", answer: "Rearranging a formula involves manipulating the equation to solve for a different variable. This can include adding, subtracting, multiplying, or dividing both sides of the equation, maintaining the equality throughout." },
-                { question: "What are the trigonometric ratios for a right triangle?", answer: "The trigonometric ratios for a right triangle are sine (sin), cosine (cos), and tangent (tan). These ratios are defined as follows: sin(θ) = opposite/hypotenuse, cos(θ) = adjacent/hypotenuse, and tan(θ) = opposite/adjacent." },
-                { question: "How do you find the lengths of the sides of a triangle?", answer: "To find the lengths of the sides of a triangle, you can use the Pythagorean theorem for right triangles (a² + b² = c²) or apply the law of sines or cosines for non-right triangles, depending on the known values." },
-                { question: "What is the method for finding angles in a triangle?", answer: "To find angles in a triangle, you can use the sine, cosine, or tangent functions depending on the information given. For example, if two sides are known, the cosine rule can be used to calculate the angles." },
-                { question: "How do angles of elevation and depression work?", answer: "Angles of elevation are measured from the horizontal line upward, while angles of depression are measured downward. These angles can be used in problems involving heights and distances, often employing trigonometric ratios." },
-                { question: "What are bearings in navigation?", answer: "Bearings are used in navigation to indicate direction, expressed in degrees from the North (0°). A bearing of 90° indicates East, 180° South, and 270° West. They help in determining precise locations on a map." },
-                { question: "How do you solve mixed two-dimensional problems?", answer: "To solve mixed two-dimensional problems, identify the geometric shapes involved, apply the relevant formulas for area or perimeter, and consider units of measurement to arrive at the solution." },
-                { question: "What is the unit circle, and why is it important?", answer: "The unit circle is a circle with a radius of 1 centered at the origin of a coordinate plane. It is important for defining trigonometric functions and their values for all angles, simplifying calculations in trigonometry." },
-                { question: "What are congruent and similar triangles?", answer: "Congruent triangles have the same shape and size, while similar triangles have the same shape but may differ in size. This distinction is key in solving geometric problems and understanding relationships between figures." },
-                { question: "How do you calculate probabilities using Venn diagrams?", answer: "Venn diagrams help visualize probabilities and relationships between events. To calculate probabilities, identify the areas representing events and their intersections, using these to find probabilities of individual and combined events." },
-                { question: "What is a probability tree diagram?", answer: "A probability tree diagram is a visual representation of possible outcomes for an event. Each branch represents a possible outcome and its associated probability, helping calculate the likelihood of various combined events." },
-                { question: "What is the significance of conditional statements in probability?", answer: "Conditional statements express the likelihood of one event occurring given that another event has already occurred. They are crucial in understanding dependencies between events and calculating conditional probabilities." },
-                { question: "What are operations with surds, and why are they useful?", answer: "Operations with surds involve simplifying and manipulating square roots or irrational numbers. They are useful for exact calculations in geometry and algebra, allowing precise mathematical expressions without rounding." }
+                { question: "How do you calculate the area of a rectangle?", answer: "To calculate the area of a rectangle, multiply its length by its width. The formula is A = l × w, where A is the area, l is the length, and w is the width." },
+                { question: "What is the formula for the surface area of a cylinder?", answer: "The surface area of a cylinder can be calculated using the formula SA = 2πr(h + r), where r is the radius of the base and h is the height." },
+                { question: "How do you find the volume of a prism?", answer: "To find the volume of a prism, use the formula V = B × h, where B is the area of the base and h is the height." },
+                { question: "What does rearranging a formula involve?", answer: "Rearranging a formula involves manipulating the equation to solve for a different variable, ensuring both sides remain equal." },
+                { question: "What are the trigonometric ratios for a right triangle?", answer: "The trigonometric ratios for a right triangle are sine (sin), cosine (cos), and tangent (tan). They are defined as follows: sin(θ) = opposite/hypotenuse, cos(θ) = adjacent/hypotenuse, and tan(θ) = opposite/adjacent." },
+                { question: "How do you find the lengths of the sides of a triangle?", answer: "To find the lengths of the sides of a triangle, you can use the Pythagorean theorem for right triangles (a² + b² = c²) or apply the law of sines or cosines for non-right triangles." },
+                { question: "What is the method for finding angles in a triangle?", answer: "To find angles in a triangle, you can use sine, cosine, or tangent functions, depending on the information provided." },
+                { question: "How do angles of elevation and depression work?", answer: "Angles of elevation are measured upward from the horizontal line, while angles of depression are measured downward. They are used in problems involving heights and distances." },
+                { question: "What are bearings in navigation?", answer: "Bearings indicate direction in degrees from the North (0°). A bearing of 90° indicates East, 180° South, and 270° West." },
+                { question: "How do you solve mixed two-dimensional problems?", answer: "To solve mixed two-dimensional problems, identify the geometric shapes involved and apply the relevant formulas for area or perimeter." },
+                { question: "What is the unit circle, and why is it important?", answer: "The unit circle is a circle with a radius of 1 centered at the origin of a coordinate plane, essential for defining trigonometric functions." },
+                { question: "What are congruent and similar triangles?", answer: "Congruent triangles are the same size and shape, while similar triangles have the same shape but different sizes." },
+                { question: "How do you calculate probabilities using Venn diagrams?", answer: "Venn diagrams visualize probabilities and relationships between events, helping to calculate probabilities of individual and combined events." },
+                { question: "What is a probability tree diagram?", answer: "A probability tree diagram visually represents possible outcomes for an event, with each branch showing an outcome and its associated probability." },
+                { question: "What is the significance of conditional statements in probability?", answer: "Conditional statements express the likelihood of one event occurring given that another event has occurred." },
+                { question: "What are operations with surds, and why are they useful?", answer: "Operations with surds involve simplifying square roots or irrational numbers, useful for exact calculations in geometry and algebra." }
             ]
         };
 
@@ -122,6 +124,13 @@
                     <h3>${card.question}</h3>
                     <p>${card.answer}</p>
                 `;
+
+                // Add click event to show/hide answer
+                cardElement.addEventListener("click", () => {
+                    const answerElement = cardElement.querySelector("p");
+                    answerElement.style.display = answerElement.style.display === "block" ? "none" : "block";
+                });
+
                 flashcardContainer.appendChild(cardElement);
             });
         }
